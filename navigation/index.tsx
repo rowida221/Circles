@@ -99,6 +99,7 @@ function BottomTabNavigator() {
         component={Personas}
         options={{
           title: "Personas",
+          headerShown: false,
           tabBarInactiveTintColor: "gray",
           tabBarActiveTintColor: "white",
           tabBarActiveBackgroundColor: "#710603",
@@ -117,6 +118,7 @@ function BottomTabNavigator() {
         component={Sketches}
         options={{
           title: "Sketches",
+          headerShown: false,
           tabBarInactiveTintColor: "gray",
           tabBarActiveTintColor: "white",
           tabBarActiveBackgroundColor: "#710603",
@@ -135,6 +137,7 @@ function BottomTabNavigator() {
         component={Home}
         options={({ navigation }: RootTabScreenProps<"Home">) => ({
           title: "Goal",
+          headerShown: false,
           tabBarInactiveTintColor: "gray",
           tabBarActiveTintColor: "white",
           tabBarActiveBackgroundColor: "#710603",
@@ -149,21 +152,21 @@ function BottomTabNavigator() {
               color={color}
             />
           ),
-          headerRight: () => (
-            <Pressable
-              onPress={() => navigation.navigate("Modal")}
-              style={({ pressed }) => ({
-                opacity: pressed ? 0.5 : 1,
-              })}
-            >
-              <FontAwesome
-                name="info-circle"
-                size={25}
-                color={Colors[colorScheme].text}
-                style={{ marginRight: 15 }}
-              />
-            </Pressable>
-          ),
+          // headerRight: () => (
+          //   <Pressable
+          //     onPress={() => navigation.navigate("Modal")}
+          //     style={({ pressed }) => ({
+          //       opacity: pressed ? 0.5 : 1,
+          //     })}
+          //   >
+          //     <FontAwesome
+          //       name="info-circle"
+          //       size={25}
+          //       color={Colors[colorScheme].text}
+          //       style={{ marginRight: 15 }}
+          //     />
+          //   </Pressable>
+          // ),
         })}
       />
 
@@ -172,6 +175,7 @@ function BottomTabNavigator() {
         component={Critique}
         options={{
           title: "Critique",
+          headerShown: false,
           tabBarInactiveTintColor: "gray",
           tabBarActiveTintColor: "white",
           tabBarActiveBackgroundColor: "#710603",
@@ -191,6 +195,7 @@ function BottomTabNavigator() {
         component={Technologies}
         options={{
           title: "Technologies",
+          headerShown: false,
           tabBarInactiveTintColor: "gray",
           tabBarActiveTintColor: "white",
           tabBarActiveBackgroundColor: "#710603",
