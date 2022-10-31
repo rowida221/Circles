@@ -55,7 +55,11 @@ export default function TechnologiesScreen() {
           >
             {/* <Image source={icon} style={{ width: 150, height: 130 }} /> */}
             <Text
-              style={{ fontSize: 30, color: colors.BLUE, fontWeight: "bold" }}
+              style={{
+                fontSize: Platform.OS === "ios" ? 22 : 30,
+                color: colors.BLUE,
+                fontWeight: "bold",
+              }}
             >
               Technologies/Frameworks
             </Text>
@@ -184,7 +188,11 @@ export default function TechnologiesScreen() {
       >
         <View style={{ flex: 0.65, alignSelf: "center", width: "100%" }}>
           <Text
-            style={{ fontSize: 17, textAlign: "justify", fontWeight: "bold" }}
+            style={{
+              fontSize: Platform.OS === "ios" ? 14 : 18,
+              textAlign: "auto",
+              fontWeight: "bold",
+            }}
           >
             I am very confident with these technologies and has previous
             projects done using them.

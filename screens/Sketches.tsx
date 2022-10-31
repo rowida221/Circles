@@ -59,7 +59,12 @@ export default class SketchesScreen extends React.Component {
               style={styles.tabItem}
               onPress={() => this.setState({ index: i })}
             >
-              <Animated.Text style={{ opacity, fontSize: 13 }}>
+              <Animated.Text
+                style={{
+                  opacity,
+                  fontSize: Platform.OS === "ios" ? 10 : 13,
+                }}
+              >
                 {route.title}
               </Animated.Text>
             </TouchableOpacity>

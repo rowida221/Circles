@@ -6,6 +6,8 @@ import {
   Image,
   TouchableOpacity,
   Modal,
+  Platform,
+  Pressable,
 } from "react-native";
 import { colors } from "../../assets/theme";
 import firstPersona from "../../assets/images/firstPersona.png";
@@ -112,7 +114,7 @@ export default class ThirdScreen extends React.Component {
               </Text>
               <Image
                 source={fl}
-                style={{ width: "60%", height: 45, alignSelf: "center" }}
+                style={{ width: "55%", height: 45, alignSelf: "center" }}
               />
               <Text
                 style={{

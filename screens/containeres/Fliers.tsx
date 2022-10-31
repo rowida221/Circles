@@ -6,6 +6,8 @@ import {
   Image,
   TouchableOpacity,
   Modal,
+  Platform,
+  Pressable,
 } from "react-native";
 import { colors } from "../../assets/theme";
 import fliers from "../../assets/images/fliers.png";
@@ -29,46 +31,52 @@ export default class FliersScreen extends React.Component {
           visible={this.state.modalVisible}
           transparent={false}
           onRequestClose={() => this.setState({ modalVisible: false })}
-          style={{
-            minHeight: 200,
-            width: "100%",
-            alignSelf: "center",
-            flex: 6,
-          }}
         >
-          <View
+          <Pressable
             style={{
-              height: 20,
-              width: 30,
-              alignSelf: "flex-end",
-              margin: 10,
-              marginRight: 20,
-              flex: 0.3,
-            }}
-          >
-            <TouchableOpacity
-              onPress={() => this.setState({ modalVisible: false })}
-              style={{ borderWidth: 1 }}
-            >
-              <Text style={{ fontSize: 23 }}> X </Text>
-            </TouchableOpacity>
-          </View>
-          <View
-            style={{
+              minHeight: 200,
               width: "100%",
               alignSelf: "center",
-              flex: 5,
+              flex: 6,
             }}
+            onPress={() => this.setState({ modalVisible: false })}
           >
-            <Image
-              source={this.state.imageName}
+            <View
               style={{
-                width: "75%",
-                height: "90%",
-                alignSelf: "center",
+                height: 20,
+                width: 30,
+                alignSelf: "flex-end",
+                margin: 10,
+                marginRight: 20,
+                flex: 0.3,
               }}
-            />
-          </View>
+            >
+              {Platform.OS !== "ios" && (
+                <TouchableOpacity
+                  onPress={() => this.setState({ modalVisible: false })}
+                  style={{ borderWidth: 1, minHeight: 25 }}
+                >
+                  <Text style={{ fontSize: 25 }}> X </Text>
+                </TouchableOpacity>
+              )}
+            </View>
+            <View
+              style={{
+                width: "100%",
+                alignSelf: "center",
+                flex: 5,
+              }}
+            >
+              <Image
+                source={this.state.imageName}
+                style={{
+                  width: Platform.OS === "ios" ? "85%" : "75%",
+                  height: Platform.OS === "ios" ? "80%" : "90%",
+                  alignSelf: "center",
+                }}
+              />
+            </View>
+          </Pressable>
         </Modal>
         <View
           style={{

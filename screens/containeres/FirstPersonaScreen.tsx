@@ -6,6 +6,8 @@ import {
   Image,
   TouchableOpacity,
   Modal,
+  Platform,
+  Pressable,
 } from "react-native";
 import { colors } from "../../assets/theme";
 import firstPersona from "../../assets/images/firstPersona.png";
