@@ -4,8 +4,8 @@ Steps to run the app:
 • Install yarn using the command npm install --global yarn
 • Install expo using the command npm i expo-cli
 • Run the command yarn
-• To start the application, open the virtual Android Device
+• To start the application, open the virtual Android Device / or download Expo Go on an actual phone
 then run the command: yarn start
-then press a
+then press a / or scan QR code with the phone
 
 PS: all GitHub commits are done in one day because I've created the app in one day.
