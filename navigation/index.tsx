@@ -25,7 +25,7 @@ import useColorScheme from "../hooks/useColorScheme";
 import ModalScreen from "../screens/ModalScreen";
 import NotFoundScreen from "../screens/NotFoundScreen";
 import Home from "../screens/Home";
-import Personas from "../screens/Personas";
+import Persona from "../screens/Persona";
 import Sketches from "../screens/Sketches";
 import Critique from "../screens/Critique";
 import Technologies from "../screens/Technologies";
@@ -95,10 +95,10 @@ function BottomTabNavigator() {
       }}
     >
       <BottomTab.Screen
-        name="Personas"
-        component={Personas}
+        name="Persona"
+        component={Persona}
         options={{
-          title: "Personas",
+          title: "Persona",
           headerShown: false,
           tabBarInactiveTintColor: "gray",
           tabBarActiveTintColor: "white",

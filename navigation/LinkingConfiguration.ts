@@ -20,9 +20,9 @@ const linking: LinkingOptions<RootStackParamList> = {
               HomeScreen: 'Home',
             },
           },
-          Personas: {
+          Persona: {
             screens: {
-              PersonasScreen: 'Personas',
+              PersonaScreen: 'Persona',
             },
           },
           Sketches: {
